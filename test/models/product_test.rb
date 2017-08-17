@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "belongs to a category" do
+    product = Product.new
+    assert product.respond_to?(:category)
+  end
 end
