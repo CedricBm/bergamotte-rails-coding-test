@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get 'orders', to: 'orders#index', as: :orders
 
   get 'queries/sql', to: 'queries#sql', as: :sql_query
+  get 'queries/active-record', to: 'queries#active_record', as: :active_record_query
 end

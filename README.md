@@ -38,6 +38,7 @@ customer_id | customer_first_name | category_id | category_name
 1 |John | 1 | Bouquets
 
 5. Use active record methods to achieve the result above.
+**The methods are available in the queries controller and the result is displayed on the /queries/active-record page**
 
 6. Extend ruby Hash Class to use your own implementation of the [Hash#dig](http://ruby-doc.org/core-2.3.0_preview1/Hash.html#method-i-dig) method without ruby 2.3. Make it available in the Rails app.
 

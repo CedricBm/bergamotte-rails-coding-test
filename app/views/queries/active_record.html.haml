@@ -1,0 +1,14 @@
+%table
+  %thead
+    %tr
+      %th customer_id
+      %th customer_first_name
+      %th category_id
+      %th category_name
+  %tbody
+    - @categories_bought_by_customers.each do |row|
+      %tr
+        %td= row.first
+        %td= row.second
+        %td= row.third
+        %td= row.fourth

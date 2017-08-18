@@ -13,4 +13,11 @@ class QueriesController < ApplicationController
     @categories_bought_by_customers = ActiveRecord::Base.connection.execute(sql)
   end
 
+  def active_record
+    @categories_bought_by_customers =
+        Customer.joins(orders: [product: :category])
+                .order("customer_id asc, category_id asc")
+                .pluck("customers.id, customers.first_name, categories.id, categories.name")
+  end
+
 end
