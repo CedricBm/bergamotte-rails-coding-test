@@ -6,6 +6,7 @@ class AnalyticsController < ApplicationController
 
     @products = Product.ordered_within_week(@begin_date)
     @items = Item.ordered_within_week(@begin_date)
+    @customers_orders = Order.customer_count_by_number_of_orders(@begin_date)
 
     respond_to :html, :js
   end

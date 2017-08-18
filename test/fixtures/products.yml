@@ -9,3 +9,8 @@ quartz:
   category_id: 1
   name: Quartz
   price: 1.5
+
+diamond:
+  category_id: 1
+  name: Diamond
+  price: 1.5

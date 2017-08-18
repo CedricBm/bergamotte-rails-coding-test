@@ -9,3 +9,8 @@ martin:
   first_name: Martin
   login: Martin
   password: password
+
+arthur:
+  first_name: Arthur
+  login: Arthur
+  password: password

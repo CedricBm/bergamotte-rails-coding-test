@@ -19,4 +19,11 @@ class MyHash < Hash
 
     return temp_hash
   end
+
+  def safe_invert
+    @my_hash.each_with_object({}) do |(key, value), memo|
+      memo[value] ||= []
+      memo[value] << key
+    end
+  end
 end

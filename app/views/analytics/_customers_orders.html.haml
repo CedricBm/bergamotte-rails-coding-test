@@ -1,0 +1,14 @@
+%h2 Order uniq customer count by number of orders
+
+%table
+  %thead
+    %tr
+      %th Orders
+      %th Customers
+      %th Percentage
+  %tbody
+    - customers_orders.each do |key, value|
+      %tr
+        %td= pluralize(key, 'order')
+        %td= value["customer_count"]
+        %td= value["customer_rate"]
