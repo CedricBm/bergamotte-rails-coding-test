@@ -9,7 +9,7 @@ class OrdersControllerTest < ActionController::TestCase
   test "shows orders when logged" do
     customer = customers(:david)
     session[:customer_login] = customer.login
-    session[:password] = customer.password
+    session[:customer_password] = customer.password
 
     get :index
     assert_response :success
