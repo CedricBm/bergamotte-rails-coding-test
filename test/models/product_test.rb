@@ -8,11 +8,13 @@ class ProductTest < ActiveSupport::TestCase
 
   test "sums the amount of item ordered" do
     marble = products(:marble)
+    quartz = products(:quartz)
 
     assert_equal 5, marble.items_amount
+    assert_equal 0, quartz.items_amount
   end
 
-  test "product has been ordered within the week timeframe" do
+  test "products has been ordered within the week timeframe" do
     products = Product.ordered_within_week(1.week.ago)
 
     marble = products(:marble)
@@ -22,7 +24,7 @@ class ProductTest < ActiveSupport::TestCase
     assert products.exclude?(quartz)
   end
 
-  test "product has been ordered within the last week" do
+  test "products has been ordered within the last week" do
     products = Product.ordered_within_week(nil)
 
     marble = products(:marble)

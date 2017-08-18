@@ -5,5 +5,6 @@ class AnalyticsController < ApplicationController
                             params["analytics"]["date(3i)"].to_i) if params["analytics"].present?
 
     @products = Product.ordered_within_week(@begin_date)
+    @items = Item.ordered_within_week(@begin_date)
   end
 end

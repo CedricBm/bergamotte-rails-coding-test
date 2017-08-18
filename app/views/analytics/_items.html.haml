@@ -1,0 +1,14 @@
+%h2 Breakdown by items of sold quantities (based on orders.created_at)
+
+%table
+  %thead
+    %tr
+      %th item_id
+      %th item_name
+      %th sold_quantity
+  %tbody
+    - items.each do |item|
+      %tr
+        %td= item.id
+        %td= item.name
+        %td= item.items_amount

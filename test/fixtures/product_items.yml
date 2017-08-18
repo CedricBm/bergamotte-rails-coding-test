@@ -2,10 +2,10 @@
 
 one:
   product: marble
-  item_id: 1
+  item: paper
   quantity: 2
 
 two:
   product: marble
-  item_id: 1
+  item: paper
   quantity: 3
