@@ -39,6 +39,7 @@ group :development, :test do
   gem 'byebug'
   gem 'faker'
   gem 'hirb'
+  gem 'better_errors'
 end
 
 group :development do

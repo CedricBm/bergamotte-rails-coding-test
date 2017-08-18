@@ -29,6 +29,7 @@ Please implement the following  stories.
 **I did not implement the password encryption on purpose since I did not think it was the goal of this task. Otherwise, I would have used Devise for user management**
 
 4. Write a SQL query to return the results as display below:
+**The query is available in the queries controller and the result is displayed on the /queries/sql page**
 
 ***Example***
 

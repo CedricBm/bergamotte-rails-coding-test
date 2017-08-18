@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   post 'customers/login/create', to: 'customers_login#create', as: :create_customer_login
 
   get 'orders', to: 'orders#index', as: :orders
+
+  get 'queries/sql', to: 'queries#sql', as: :sql_query
 end
