@@ -29,3 +29,33 @@ five:
   product: marble
   status: 2
   created_at: <%= Time.now - 1.day %>
+
+six:
+  customer: arthur
+  product: marble
+  status: 2
+  created_at: <%= Time.new(2016,6,2) %>
+
+seven:
+  customer: martin
+  product: marble
+  status: 2
+  created_at: <%= Time.new(2016,6,5) %>
+
+eight:
+  customer: arthur
+  product: marble
+  status: 2
+  created_at: <%= Time.new(2016,7,5) %>
+
+nine:
+  customer: david
+  product: marble
+  status: 2
+  created_at: <%= Time.new(2016,7,23) %>
+
+ten:
+  customer: david
+  product: marble
+  status: 2
+  created_at: <%= Time.new(2016,7,24) %>

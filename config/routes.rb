@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'queries/active-record', to: 'queries#active_record', as: :active_record_query
 
   root to: 'analytics#index'
+  get 'analytics/recurring-customers', to: 'analytics#recurring_customers', as: :recurring_customers
 end

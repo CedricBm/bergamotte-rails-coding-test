@@ -10,4 +10,8 @@ class AnalyticsController < ApplicationController
 
     respond_to :html, :js
   end
+
+  def recurring_customers
+    @recurring_customers = Customer.recurring_customers_by_month
+  end
 end

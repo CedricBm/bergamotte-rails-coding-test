@@ -1,0 +1,16 @@
+%h1 Analytics - Recurring customers
+
+%table
+  %thead
+    %tr
+      %th Month
+      %th Recurring Customer
+      %th New Customer
+      %th Total
+  %tbody
+    - @recurring_customers.each do |key, value|
+      %tr
+        %td= key
+        %td= value["recurring"]
+        %td= value["new"]
+        %td= value["total"]
