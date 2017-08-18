@@ -25,11 +25,10 @@ Please implement the following  stories.
 2. A product belongs to a Category.
 
 3. Any customer browse to an account page and is prompted with a login page. They enter their credentials (login and password) and are presented with exactly their orders (sorted by status).
-**The account page can be accessed via the /orders url**
-**I did not implement the password encryption on purpose since I did not think it was the goal of this task. Otherwise, I would have used Devise for user management**
+**Answer: The account page can be accessed via the /orders url. I did not implement the password encryption on purpose since I did not think it was the goal of this task. Otherwise, I would have used Devise for user management**
 
 4. Write a SQL query to return the results as display below:
-**The query is available in the queries controller and the result is displayed on the /queries/sql page**
+**Answer: The query is available in the queries controller and the result is displayed on the /queries/sql page**
 
 ***Example***
 
@@ -38,11 +37,13 @@ customer_id | customer_first_name | category_id | category_name
 1 |John | 1 | Bouquets
 
 5. Use active record methods to achieve the result above.
-**The methods are available in the queries controller and the result is displayed on the /queries/active-record page**
+**Answer: The methods are available in the queries controller and the result is displayed on the /queries/active-record page**
 
 6. Extend ruby Hash Class to use your own implementation of the [Hash#dig](http://ruby-doc.org/core-2.3.0_preview1/Hash.html#method-i-dig) method without ruby 2.3. Make it available in the Rails app.
+**Answer: The solution is in this file /config/initializers/my_hash.rb**
 
 7. Analytics
+**Answer: The 4 first dashboards are displayed on the root page and the last one is on this url /analytics/recurring-customers**
 
   *We need a weekly summary page displaying:*
   1. Breakdown by product of sold quantities (based on orders.created_at)
@@ -69,6 +70,8 @@ July 2016|15|290|305
 # Additional questions
 *No coding necessary, explain the concept or sketch your thoughts.*
 
-- We want to add a subscription feature to allow our customers to receive flower automaticaly. How would you design the tables, what are the pros and cons of your approach?
+- We want to add a subscription feature to allow our customers to receive flower automatically. How would you design the tables, what are the pros and cons of your approach?
+**Answer: I'll assume that the payment logic is not in this question's scope. I would add a `recurrent_orders` table which would be like the `orders` table but with the recurrence logic. The new data should be the subscription type (this could be a new table), the recurrence frequency (like every day, week or month), the end date of this subscription. Then, I would write a cron that would check every day if an order should be made, and if so, automatically creates the order from the recurrent_order. The pros are that it is a simple solution that works well in most cases. The cons are that the cron might fail once in a while so we must be sure to write good tests to ensure that the recurrent order was really passed.**
 
 - When facing a high traffic and limited supply, how do you distribute the stock among clients checking out?
+**Answer: When a client chooses a flower and adds it in his cart, that flower should be "reserved" for him, but only for a limited time like 15 or 30 minutes. So the client will have a limited time to purchase the flower or else it will be removed from his cart and be placed back in the stock available. Of course, the client shall have a timer telling him how much time he has left for buying his flower.**
