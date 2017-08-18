@@ -2,9 +2,9 @@
 
 %p Select the beginning day of the week.
 
-= form_tag root_path, method: :get do
+= form_tag root_path, method: :get, remote: true do
   = date_select :analytics, :date, :order => [:day, :month, :year], default: @begin_date || 1.week.ago
   = submit_tag "Valider"
 
-= render "analytics/products", products: @products
-= render "analytics/items", items: @items
+#products-dashboard= render "analytics/products", products: @products
+#items-dashboard= render "analytics/items", items: @items

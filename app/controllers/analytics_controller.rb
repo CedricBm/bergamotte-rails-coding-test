@@ -6,5 +6,7 @@ class AnalyticsController < ApplicationController
 
     @products = Product.ordered_within_week(@begin_date)
     @items = Item.ordered_within_week(@begin_date)
+
+    respond_to :html, :js
   end
 end
