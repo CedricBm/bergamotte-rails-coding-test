@@ -1,0 +1,14 @@
+%h2 Breakdown by product of sold quantities (based on orders.created_at)
+
+%table
+  %thead
+    %tr
+      %th product_id
+      %th product_name
+      %th sold_quantity
+  %tbody
+    - products.each do |product|
+      %tr
+        %td= product.id
+        %td= product.name
+        %td= product.items_amount

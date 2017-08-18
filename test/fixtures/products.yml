@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+marble:
   category_id: 1
-  name: MyString
+  name: Marble
   price: 1.5
 
-two:
+quartz:
   category_id: 1
-  name: MyString
+  name: Quartz
   price: 1.5

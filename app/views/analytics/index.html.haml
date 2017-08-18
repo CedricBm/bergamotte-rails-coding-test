@@ -1,0 +1,9 @@
+%h1 Analytics
+
+%p Select the beginning day of the week.
+
+= form_tag root_path, method: :get do
+  = date_select :analytics, :date, :order => [:day, :month, :year], default: @begin_date || 1.week.ago
+  = submit_tag "Valider"
+
+= render "analytics/products", products: @products

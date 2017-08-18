@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   get 'queries/sql', to: 'queries#sql', as: :sql_query
   get 'queries/active-record', to: 'queries#active_record', as: :active_record_query
+
+  root to: 'analytics#index'
 end
