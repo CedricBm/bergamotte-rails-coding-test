@@ -5,4 +5,12 @@ class CustomerTest < ActiveSupport::TestCase
     customer = Customer.new
     assert customer.respond_to?(:orders)
   end
+
+  test "orders are sorted by status" do
+    customer = customers(:david)
+    orders = customer.sorted_orders
+
+    assert_equal "confirmed", orders.first.status
+    assert_equal "canceled", orders.second.status
+  end
 end

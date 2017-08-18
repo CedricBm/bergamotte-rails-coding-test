@@ -1,0 +1,16 @@
+%table
+  %thead
+    %tr
+      %th id
+      %th product_id
+      %th status
+      %th created_at
+      %th updated_at
+  %tbody
+    - @orders.each do |order|
+      %tr
+        %td= order.id
+        %td= order.product_id
+        %td= order.status
+        %td= order.created_at.strftime("%d %B %Y")
+        %td= order.updated_at.strftime("%d %B %Y")

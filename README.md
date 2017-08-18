@@ -25,6 +25,8 @@ Please implement the following  stories.
 2. A product belongs to a Category.
 
 3. Any customer browse to an account page and is prompted with a login page. They enter their credentials (login and password) and are presented with exactly their orders (sorted by status).
+**The account page can be accessed via the /orders url**
+**I did not implement the password encryption on purpose since I did not think it was the goal of this task. Otherwise, I would have used Devise for user management**
 
 4. Write a SQL query to return the results as display below:
 
